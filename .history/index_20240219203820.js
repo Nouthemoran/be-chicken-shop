@@ -14,7 +14,7 @@ try {
     await db.authenticate();
     console.log('database connected..');
 } catch (error) {
-    console.error(error);
+    console.error(error.message);
 }
 
 

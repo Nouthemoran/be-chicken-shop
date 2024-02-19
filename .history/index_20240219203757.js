@@ -5,7 +5,6 @@ import CustomerRoute from "./routes/CustomerRoute.js";
 import AdminRoute from "./routes/AdminRoute.js";
 const app = express();
 
-app.use(cors());
 app.use(express.json());
 app.use(CustomerRoute);
 app.use(AdminRoute);
@@ -14,7 +13,7 @@ try {
     await db.authenticate();
     console.log('database connected..');
 } catch (error) {
-    console.error(error);
+    console.error(error.message);
 }
 
 
