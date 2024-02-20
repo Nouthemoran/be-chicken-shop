@@ -1,0 +1,22 @@
+
+GET http://localhost:5000/users
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "username": "hafiz", 
+    "email": "hafiz@gmail.com", 
+    "password": "hafiz123",
+    "confPassword": "hafiz123"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "hafiz@gmail.com", 
+    "password": "hafiz123",
+}
