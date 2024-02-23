@@ -4,8 +4,8 @@ import cors from "cors";
 import db from "./config/Database.js";
 import CustomerRoute from "./routes/CustomerRoute.js";
 import AdminRoute from "./routes/AdminRoute.js";
-import MakananRoute from "./routes/MakananRoute.js";
-import OrderRoute from "./routes/OrderRoute.js";
+import Makanan from "./models/MakananRoute.js";
+import Order from "./models/OrderRoute.js";
 dotenv.config()
 const app = express();
 
@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(CustomerRoute);
 app.use(AdminRoute);
 app.use(MakananRoute);
-app.use(OrderRoute);
+app.use(MakananRoute);
 
 try {
     await db.authenticate();

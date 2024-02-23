@@ -4,8 +4,8 @@ import cors from "cors";
 import db from "./config/Database.js";
 import CustomerRoute from "./routes/CustomerRoute.js";
 import AdminRoute from "./routes/AdminRoute.js";
-import MakananRoute from "./routes/MakananRoute.js";
-import OrderRoute from "./routes/OrderRoute.js";
+import MakananRoute from "./models/MakananRoute.js";
+import OrderRoute from "./models/OrderRoute.js";
 dotenv.config()
 const app = express();
 
