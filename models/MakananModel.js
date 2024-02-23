@@ -9,8 +9,11 @@ const Makanan = db.define('Makanan', {
         primaryKey: true,
         autoIncrement: true
       },
-      nama_makanan: DataTypes.STRING(25),
-      harga: DataTypes.INTEGER,
+    nama_makanan: {
+        type: DataTypes.STRING(25),
+        unique: true
+    },
+    harga: DataTypes.INTEGER,
     
 },{
     freezeTableName:true

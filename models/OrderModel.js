@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
-import Makanan from "./Makanan.js"; // Import model Makanan
+import Makanan from "./MakananModel.js"; // Import model Makanan
 
 const { DataTypes } = Sequelize;
 
