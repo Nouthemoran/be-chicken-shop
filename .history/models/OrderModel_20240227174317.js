@@ -10,8 +10,9 @@ const Order = db.define('Order', {
         primaryKey: true,
         autoIncrement: true
     },
-    id_makanan: {
-        type: DataTypes.INTEGER, // Ubah tipe data menjadi INTEGER
+    // Menggunakan nama_makanan sebagai referensi ke model Makanan
+    makanan: {
+        type: DataTypes.STRING(25),
         allowNull: false
     },
     total_harga: {
@@ -35,7 +36,12 @@ const Order = db.define('Order', {
 });
 
 // Menambahkan relasi antara Order dan Makanan
-Order.belongsTo(Makanan, { foreignKey: 'id_makanan', targetKey: 'id_makanan', as: 'makanan' });
+Order.associate = (models) => {
+    Order.belongsTo(models.Makanan, {
+        foreignKey: 'makanan_id',
+        as: 'makanan'
+    });
+}
 
 export default Order;
 

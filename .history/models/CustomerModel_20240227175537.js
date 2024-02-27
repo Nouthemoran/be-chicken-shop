@@ -4,7 +4,7 @@ import db from "../config/Database.js";
 const {DataTypes} = Sequelize;
 
 const Customer = db.define('Customer', {
-    id: {
+    i: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true

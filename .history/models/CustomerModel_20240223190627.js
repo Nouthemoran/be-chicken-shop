@@ -9,13 +9,11 @@ const Customer = db.define('Customer', {
         primaryKey: true,
         autoIncrement: true
       },
+    nama: DataTypes.STRING(25),
     alamat: DataTypes.TEXT,
     no_hp: DataTypes.STRING(13),
     email: {
         type: DataTypes.STRING
-    },
-    username: {
-        type:DataTypes.STRING
     },
     password: {
         type:DataTypes.STRING

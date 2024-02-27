@@ -3,14 +3,12 @@ import db from "../config/Database.js";
 
 const {DataTypes} = Sequelize;
 
-const Customer = db.define('Customer', {
-    id: {
+const Admin = db.define('Admin', {
+    id_Ad: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
       },
-    alamat: DataTypes.TEXT,
-    no_hp: DataTypes.STRING(13),
     email: {
         type: DataTypes.STRING
     },
@@ -23,13 +21,12 @@ const Customer = db.define('Customer', {
     refresh_token: {
         type: DataTypes.TEXT
     }
-
     
 },{
     freezeTableName:true
 });
 
-export default Customer;
+export default Admin;
 
 (async () => {
     await db.sync();

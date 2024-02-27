@@ -1,6 +1,4 @@
 import Customer from "../models/CustomerModel.js";
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
 
 export const getCustomer = async(req, res) => {
     try {
@@ -17,10 +15,8 @@ export const register = async (req, res) => {
     const salt = await bcrypt.genSalt()
     const hashPassword = await bcrypt.hash(password, salt);
     try{
-        await Customer.create({
-            nama: nama,
-            alamat: alamat,
-            no_hp: no_hp,
+        await Admin.create({
+            nama :
             username: username,
             email: email,
             password: hashPassword

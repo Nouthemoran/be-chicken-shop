@@ -9,21 +9,10 @@ const Customer = db.define('Customer', {
         primaryKey: true,
         autoIncrement: true
       },
-    alamat: DataTypes.TEXT,
-    no_hp: DataTypes.STRING(13),
-    email: {
-        type: DataTypes.STRING
-    },
-    username: {
-        type:DataTypes.STRING
-    },
-    password: {
-        type:DataTypes.STRING
-    },
-    refresh_token: {
-        type: DataTypes.TEXT
-    }
-
+      nama: DataTypes.STRING(25),
+      alamat: DataTypes.TEXT,
+      no_hp: DataTypes.STRING(13),
+      
     
 },{
     freezeTableName:true

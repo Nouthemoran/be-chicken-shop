@@ -35,7 +35,7 @@ const Order = db.define('Order', {
 });
 
 // Menambahkan relasi antara Order dan Makanan
-Order.belongsTo(Makanan, { foreignKey: 'id_makanan', targetKey: 'id_makanan', as: 'makanan' });
+Order.belongsTo(Makanan, { foreignKey: 'id_makanan', targetKey: 'id_m', as: 'makanan' });
 
 export default Order;
 

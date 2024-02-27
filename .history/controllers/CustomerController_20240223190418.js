@@ -1,6 +1,4 @@
 import Customer from "../models/CustomerModel.js";
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
 
 export const getCustomer = async(req, res) => {
     try {
